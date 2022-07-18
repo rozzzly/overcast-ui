@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "rootDir": ".",
+        "baseUrl": ".",
+        // "paths": {
+        //     "@overcast-ui/docs": ["./packages/docs/src"],
+        //     "@overcast-ui/theme": ["./packages/theme/src"],
+        //     "@overcast-ui/core": ["./packages/core/src"]
+        // },
+        "strictNullChecks": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "outDir": "dist",
+        "allowUnusedLabels": false,
+        "noImplicitReturns": true,
+        "importsNotUsedAsValues": "preserve",
+        "noUnusedParameters": false,
+        "lib": [
+            "ESNext",
+            "dom"
+        ],
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "pretty": true
+    },
+    "exclude": [
+        "node_modules",
+    ]
+}
