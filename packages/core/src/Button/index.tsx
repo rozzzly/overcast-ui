@@ -8,12 +8,31 @@ const StyledButton = styled.button`
     }
 `;
 
-export interface ButtonProps {
+interface ButtonProps {
+    /**
+     * Is this the principal call to action on the page?
+     */
+    primary?: boolean;
+    /**
+     * What background color to use
+     */
+    backgroundColor?: string;
+    /**
+     * How large should the button be?
+     */
+    size?: 'small' | 'medium' | 'large';
+    /**
+     * Button contents
+     */
     label: string;
+    /**
+     * Optional click handler
+     */
+    onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({ label }) => {
     return (
-        <StyledButton>{ label }</StyledButton>
+        <StyledButton>{label}</StyledButton>
     );
 };

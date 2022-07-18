@@ -7,11 +7,11 @@
         "moduleResolution": "node",
         "rootDir": ".",
         "baseUrl": ".",
-        // "paths": {
-        //     "@overcast-ui/docs": ["./packages/docs/src"],
-        //     "@overcast-ui/theme": ["./packages/theme/src"],
-        //     "@overcast-ui/core": ["./packages/core/src"]
-        // },
+        "paths": {
+            "@overcast-ui/docs": ["./packages/docs/src"],
+            "@overcast-ui/theme": ["./packages/theme/src"],
+            "@overcast-ui/core": ["./packages/core/src"]
+        },
         "strictNullChecks": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
