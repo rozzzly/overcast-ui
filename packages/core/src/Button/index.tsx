@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { RED } from '@overcast-ui/theme';
+import { BLUE } from '@overcast-ui/theme/colors';
 
 const StyledButton = styled.button`
     button {
-        background: ${RED};
+        background: ${BLUE[5]};
     }
 `;
 

@@ -1,10 +1,11 @@
+const logo = require('./logo.svg');
 const { create } = require('@storybook/theming');
 
 module.exports = create({
     base: 'dark',
     brandTitle: 'My custom storybook',
     brandUrl: 'https://example.com',
-    brandImage: 'https://place-hold.it/350x150',
+    brandImage: logo,
     brandTarget: '_self',
     appBg: '#1f2931',
     appContentBg: '#30404d',

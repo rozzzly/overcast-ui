@@ -8,9 +8,10 @@
         "rootDir": ".",
         "baseUrl": ".",
         "paths": {
-            "@overcast-ui/docs": ["./packages/docs/src"],
-            "@overcast-ui/theme": ["./packages/theme/src"],
-            "@overcast-ui/core": ["./packages/core/src"]
+            "@overcast-ui/docs/*": ["./packages/docs/src/*"],
+            "@overcast-ui/theme/*": ["./packages/theme/src/*"],
+            "@overcast-ui/core/*": ["./packages/core/src/*"],
+            "@overcast-ui/utils/*": ["./packages/utils/src/*"]
         },
         "strictNullChecks": true,
         "emitDecoratorMetadata": true,
