@@ -1,6 +1,5 @@
 {
     "name": "@overcast-ui/core",
-    "type": "module",
     "version": "0.0.1",
     "dependencies": {
         "@emotion/css": "^11.9.0",

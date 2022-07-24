@@ -2,7 +2,7 @@ const envTarget = process.env['TARGET'];
 const IS_TEST = 'TEST' in process.env;
 const TARGET = (envTarget && envTarget.toLowerCase() === 'esm') ? 'esm' : 'cjs';
 
-export default (api) => ({
+module.exports = (api) => ({
     presets: [
         ['@babel/preset-env', {
             modules: (TARGET === 'esm') ? false : 'commonjs',

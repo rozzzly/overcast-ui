@@ -13,10 +13,10 @@ module.exports = (api) => {
             '@babel/preset-react'
         ],
         plugins: [
-            // (IS_TEST
-            //     ? null // do not include `babel-plugin-module-extension-resolver` when jest is in use
-            //     : ['babel-plugin-module-extension-resolver']
-            // ),
+            (IS_TEST
+                ? null // do not include `babel-plugin-module-extension-resolver` when jest is in use
+                : ['babel-plugin-module-extension-resolver']
+            ),
             [
                 '@babel/plugin-transform-runtime',
                 {

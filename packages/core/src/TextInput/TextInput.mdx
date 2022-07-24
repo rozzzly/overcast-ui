@@ -1,0 +1,22 @@
+---
+name: Hello world
+route: /custom-route
+---
+
+
+
+import { Playground, Props } from 'docz'
+import TextInput from './index'
+
+## Intent
+
+Intents provide a way to visually communicate the status of an input. For example, a `TextInput` with a `intent="danger"`
+will display a text input which is styled to indicate that the value is invalid.
+
+<Props of={TextInput} />
+
+## Basic usage
+
+<Playground>
+    <TextInput placeholder="hello" danger/>
+</Playground>

@@ -5,11 +5,12 @@
   "author": "rozzzly (Patrick Lienau)",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*"],
-  "scripts": {
-  },
-  "devDependencies": {
-  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {},
+
   "dependencies": {
+
   }
 }

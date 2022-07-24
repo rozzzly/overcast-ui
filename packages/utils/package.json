@@ -1,6 +1,5 @@
 {
     "name": "@overcast-ui/utils",
-    "type": "module",
     "main": "index.ts",
     "types": "index.d.ts",
     "version": "0.0.1",
