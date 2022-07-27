@@ -21,14 +21,14 @@ const kind = (outline: boolean) => (bg: string, color: string) => {
     const backgroundColor = outline ? 'transparent' : bg
 
     return `
-    background: ${backgroundColor};
-    box-shadow: inset 0 0 0 1px ${boxShadowColor};
-    color: ${outline ? bg : color};
-    transition: all .3s;
-    &:hover {
-      box-shadow: inset 0 0 0 1000px ${boxShadowColor};
-      color: ${color};
-    }
+        background: ${backgroundColor};
+        box-shadow: inset 0 0 0 1px ${boxShadowColor};
+        color: ${outline ? bg : color};
+        transition: all .3s;
+        &:hover {
+            box-shadow: inset 0 0 0 1000px ${boxShadowColor};
+            color: ${color};
+        }
   `
 }
 
@@ -51,6 +51,7 @@ export interface ButtonProps {
     scale: 'small' | 'normal' | 'big';
     kind: 'primary' | 'secondary' | 'cancel' | 'dark' | 'gray';
     outline: boolean;
+    children: React.ReactNode;
 }
 
 const getScale = ({ scale = 'normal' }: ButtonProps) => scales[scale]

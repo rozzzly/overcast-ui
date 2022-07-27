@@ -7,22 +7,15 @@ module.exports = (api) => {
     return {
         presets: [
             ['@babel/preset-env', {
-                modules: (TARGET === 'esm') ? false : 'commonjs',
+                targets: {
+                    node: 'current'
+                }
             }],
             '@babel/preset-typescript',
             '@babel/preset-react'
         ],
         plugins: [
-            (IS_TEST
-                ? null // do not include `babel-plugin-module-extension-resolver` when jest is in use
-                : ['babel-plugin-module-extension-resolver']
-            ),
-            [
-                '@babel/plugin-transform-runtime',
-                {
-                    useESModules: TARGET === 'esm'
-                }
-            ],
+            '@babel/plugin-transform-runtime',
             '@babel/plugin-proposal-class-properties',
             '@emotion/babel-plugin'
         ].filter(plugin => plugin !== null) // filter out any plugins conditionally set to `null`

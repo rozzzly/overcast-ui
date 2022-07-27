@@ -14,6 +14,7 @@
         "@types/node": "^18.0.5",
         "@types/react": "^18.0.15",
         "babel-plugin-module-extension-resolver": "^1.0.0-rc.2",
+        "gatsby-cli": "^4.19.0",
         "typescript": "^4.7.4"
     },
     "scripts": {
@@ -30,10 +31,13 @@
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
         "@emotion/styled-base": "^11.0.0",
+        "@mdx-js/mdx": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
         "gatsby": "^4.19.2",
         "gatsby-plugin-mdx": "^3.19.0",
         "gatsby-plugin-page-creator": "^4.19.0",
         "gatsby-source-filesystem": "^4.19.0",
+        "gatsby-transformer-react-docgen": "^7.19.0",
         "polished": "^4.2.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
