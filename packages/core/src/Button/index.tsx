@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { BLUE } from '@overcast-ui/theme/colors';
+import { FooBar } from './fooBar';
 
 const StyledButton = styled.button`
     button {
@@ -8,7 +9,10 @@ const StyledButton = styled.button`
     }
 `;
 
-interface ButtonProps {
+export interface ButtonProps extends FooBar {
+
+    /** what the hell */
+    bizbaz: FooBar;
     /**
      * Is this the principal call to action on the page?
      */
@@ -31,8 +35,13 @@ interface ButtonProps {
     onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label }) => {
+/**
+ * A button
+ */
+export const Button = ({ label }: ButtonProps) => {
     return (
         <StyledButton>{label}</StyledButton>
     );
 };
+
+export default Button;
