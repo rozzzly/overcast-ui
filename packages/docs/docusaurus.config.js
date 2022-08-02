@@ -1,6 +1,5 @@
 const path = require('path');
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+// const daintyOceanicNext = require('./syntax-theme.js');
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -51,9 +50,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             src: ['../core/src/**/*.tsx'],
             global: true,
             parserOptions: {
-                // pass parserOptions to react-docgen-typescript
-                // here is a good starting point which filters out all
-                // types from react
                 propFilter: (prop, component) => {
                   if (prop.parent) {
                     return !prop.parent.fileName.includes('@types/react');
@@ -69,11 +65,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            colorMode: {
+                defaultMode: 'dark',
+                disableSwitch: true,
+                respectPrefersColorScheme: false
+            },
             navbar: {
-                title: 'My Site',
+                title: 'overcast-ui',
                 logo: {
-                    alt: 'My Site Logo',
-                    src: 'img/logo.svg',
+                    alt: 'overcast-ui',
+                    src: './img/logo-wide.svg',
                 },
                 items: [
                     {
@@ -133,11 +134,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Patrick Lienau. Built with Docusaurus.`,
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                theme: {plain: {}, styles: []},
+                darkTheme: {plain: {}, styles: []}
             },
         }),
 });

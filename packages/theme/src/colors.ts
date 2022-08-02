@@ -121,6 +121,7 @@ export const VIOLET = {
     4: '#A854A8',
     5: '#C274C2',
 } as const;
+
 export const palette = {
     BLACK,
     WHITE,
@@ -144,6 +145,7 @@ export const palette = {
 };
 
 export const NORMAL_TEXT_COLOR = LIGHT_GRAY[5]
+export const PAGE_BACKGROUND = DARK_GRAY[2];
 export const CONTENT_BACKGROUND = DARK_GRAY[4];
 
 export const Intent = literalsToEnum(

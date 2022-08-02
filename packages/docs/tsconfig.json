@@ -1,11 +1,41 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "@tsconfig/docusaurus/tsconfig.json",
     "include": ["./src/**/*", "./blog/**/*", "./docs/**/*"],
     "exclude": ["node_modules"],
     "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "rootDir": "../",
+        "baseUrl": ".",
         "paths": {
-            "@site/*": ["./*"]
-        }
-
+            "@site/*": ["./*"],
+            "@overcast-ui/docs/*": ["../docs/src/*"],
+            "@overcast-ui/theme/*": ["../theme/src/*"],
+            "@overcast-ui/core/*": ["../core/src/*"],
+            "@overcast-ui/utils/*": ["../utils/src/*"]
+        },
+        "strictNullChecks": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "outDir": "dist",
+        "allowUnusedLabels": false,
+        "noImplicitReturns": true,
+        "importsNotUsedAsValues": "preserve",
+        "noUnusedParameters": false,
+        "lib": [
+            "ESNext",
+            "dom"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./stubs",
+            "@docusaurus/module-type-aliases",
+            "@docusaurus/theme-classic"
+        ],
+        "pretty": true
     }
 }

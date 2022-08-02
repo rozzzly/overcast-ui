@@ -8,6 +8,7 @@
         "rootDir": ".",
         "baseUrl": ".",
         "paths": {
+
             "@overcast-ui/docs/*": ["./packages/docs/src/*"],
             "@overcast-ui/theme/*": ["./packages/theme/src/*"],
             "@overcast-ui/core/*": ["./packages/core/src/*"],
@@ -27,7 +28,10 @@
             "dom"
         ],
         "typeRoots": [
-            "./node_modules/@types"
+            "./node_modules/@types",
+            "./stubs",
+            "@docusaurus/module-type-aliases",
+            "@docusaurus/theme-classic"
         ],
         "pretty": true
     },
