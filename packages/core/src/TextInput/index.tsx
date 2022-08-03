@@ -3,18 +3,26 @@ import React, { FocusEventHandler, MouseEventHandler, MutableRefObject, useEffec
 import { WithElementAttrs, dualRefs, wrap } from '@overcast-ui/utils/reactHelpers';
 import { WithIntent } from '@overcast-ui/theme/colors';
 import { dumbAssert } from '@overcast-ui/utils/types';
-import { IconContainer, TextInputContainer } from './containers';
+import { TextInputContainer } from './containers';
+
+/**
+ * @module @overcast-ui/TextInput
+ */
 
 const BLUR_TIMEOUT = 200;
 
 export interface TextInputProps extends WithElementAttrs<'input'>, WithIntent {
+    /** Manually control the (visible but not actual) focus state of the TextInput */
     focused?: boolean;
-    disabled?: boolean;
+    /** Disables the `<input />` */
+    disabled?: boolean
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
+    /** Automatically focus on this `<input />` when mounted */
     focusOnMount?: boolean;
     leftElement?: React.ReactNode;
     rightElement?: React.ReactNode;
+    /** DOM Ref to `<div>` containing the `<input />` */
     containerRef?: MutableRefObject<HTMLDivElement>;
 }
 
@@ -137,7 +145,7 @@ export const TextInput = wrap<TextInputProps, 'input'>(({
             disabled={!!disabled}
             intent={intent}
         >
-            { leftIcon && <IconContainer intent={intent}>{leftIcon}</IconContainer>}
+            {/* { leftIcon && <IconContainer intent={intent}>{leftIcon}</IconContainer>} */}
             { leftElement }
             <input
                 ref={dualRefs(ref, innerRef)}
@@ -148,7 +156,7 @@ export const TextInput = wrap<TextInputProps, 'input'>(({
                 disabled={!!disabled}
             />
             { rightElement }
-            { rightIcon && <IconContainer intent={intent}>{rightIcon}</IconContainer> }
+            {/* { rightIcon && <IconContainer intent={intent}>{rightIcon}</IconContainer> } */}
         </TextInputContainer>
     );
 }, 'TextInput');

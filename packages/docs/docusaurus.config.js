@@ -60,8 +60,25 @@ const path = require('path');
                 shouldExtractLiteralValuesFromEnum: true,
                 shouldRemoveUndefinedFromOptional: true,
             }
+        }],
+        // sidebar: {
+        //     A
+        // },
+        ['docusaurus-plugin-typedoc', {
+            entryPoints: ['../core/src/index.ts'],
+            entryPointStrategy: 'packages',
+            tsconfig: './tsconfig.json',
+            // to: 'docs/api/',
+            // label: 'API',
+            out: 'api',
+            sidebar: {
+              categoryLabel: 'api',
+              position: 0,
+              fullNames: true
+            },
         }]
     ],
+
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({

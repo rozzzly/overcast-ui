@@ -1,19 +1,22 @@
+import type { Props } from '@theme/Playground';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Translate from '@docusaurus/Translate';
-import type { Props } from '@theme/Playground';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { LiveProvider, LiveEditor as OriginalLiveEditor, LiveError, LivePreview } from 'react-live';
 
-import type { ThemeConfig } from '@docusaurus/theme-live-codeblock';
-import { LivePreviewLoader, PlaygroundContainer, PlaygroundEditor, PlaygroundHeader } from './styles';
+import { type ThemeConfig } from '@docusaurus/theme-live-codeblock';
+import { PlaygroundContainer, PlaygroundEditor, PlaygroundHeader } from './styles';
 
 import Panel from '@overcast-ui/core/Panel';
 
+
+const LivePreviewLoader: React.FC = () => (
+    <div>Loading...</div>
+);
 
 const Result: React.FC = ({}) => (
     <PlaygroundEditor>

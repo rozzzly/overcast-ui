@@ -15,6 +15,7 @@ module.exports = (api) => {
             '@babel/preset-react',
             // require.resolve('@docusaurus/core/lib/babel/preset')
         ],
+
         plugins: [
             ['@babel/plugin-transform-runtime', {
                 corejs: false,

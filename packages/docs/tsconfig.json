@@ -37,5 +37,16 @@
             "@docusaurus/theme-classic"
         ],
         "pretty": true
-    }
+    },
+    "references": [
+        {
+            "path": "../theme/tsconfig.json"
+        },
+        {
+            "path": "../core/tsconfig.json"
+        },
+        {
+            "path": "../utils/tsconfig.json"
+        }
+    ]
 }

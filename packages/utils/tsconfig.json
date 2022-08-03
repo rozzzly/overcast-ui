@@ -1,5 +1,12 @@
 {
     "extends": "../../tsconfig.json",
     "include": ["./src/**/*"],
-    "exclude": ["node_modules", "babel.config.js"]
+    "exclude": ["node_modules"],
+    "references": [
+        {
+            "path": "../theme/tsconfig.json"
+        }, {
+            "path": "../core/tsconfig.json"
+        }
+    ]
 }
